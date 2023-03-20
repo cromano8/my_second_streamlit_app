@@ -98,12 +98,4 @@ The 2 changes I made were:
 """
 )
 
-source = pd.read_json('imdb.json')
-st.write(source)
 
-bar = alt.Chart(source).mark_bar(color='#03cffc').encode(
-    alt.X("IMDB_Rating:Q", bin=True,title = "IMDB Rating"),
-    alt.Y('count()',title="Records")
-)
-
-st.altair_chart(bar, use_container_width=True)
